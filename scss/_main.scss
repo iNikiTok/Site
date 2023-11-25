@@ -1,0 +1,70 @@
+main {
+  width: 100%;
+  background: var(
+    --gradient-supersoft,
+    linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%)
+  );
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 600px;
+  max-height: 600px;
+  padding: 521px 0 60px 0;
+  background: url(../img/Symbol.svg) center no-repeat;
+  background-position: top;
+  background-size: 1000px;
+}
+.experience {
+  color: white;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_text {
+    max-width: 861px;
+    padding: 0 0 0 60px;
+
+    & > h3 {
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+  &_inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 60px 0 0;
+    border-right: $grey-color 2px solid;
+    & > label > h2 {
+      font-size: 38px;
+    }
+  }
+}
+//Наконец-то инпуты
+.experience input {
+  display: none; /* Hide the native radio input */
+}
+.experience label {
+  color: $grey-color;
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  transition: 1s linear;
+}
+.experience input:checked + label {
+  color: transparent; /* Делаем текст невидимым */
+  background: linear-gradient(90deg, #ef8080 0.84%, #f0145a 99.96%);
+  -webkit-background-clip: text; /* Свойство для поддержки веб-кит браузерами */
+  background-clip: text;
+}
+.experience label:hover {
+  color: $checked-color;
+}
+//end

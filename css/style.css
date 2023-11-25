@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -308,30 +309,6 @@ template {
   display: none;
 }
 
-a {
-  text-decoration: none;
-}
-
-.language {
-  color: white;
-  font-weight: 700;
-  padding: 5px 7px;
-  font-size: 12px;
-}
-.language:hover {
-  background-color: #f0145a;
-  border: #f0145a 1px solid;
-  border-radius: 8px;
-}
-
-.about_links {
-  color: white;
-  font-weight: 700;
-}
-.about_links:hover {
-  color: #f0145a;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -344,11 +321,47 @@ ul {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.language {
+  color: white;
+  font-weight: 700;
+  padding: 5px 7px;
+  font-size: 12px;
+  transition: 40ms linear;
+}
+.language:hover {
+  background-color: #f0145a;
+  border: #f0145a 1px solid;
+  border-radius: 8px;
+}
+
+.about_links {
+  color: white;
+  font-weight: 700;
+  transition: 100ms linear;
+}
+.about_links:hover {
+  color: #f0145a;
+}
+
 .header {
   padding-top: 50px;
   width: 100%;
-  background-color: gray;
-  max-height: 116px;
+  position: absolute;
+  max-height: 160px;
   display: flex;
   justify-content: space-around;
   align-items: end;
@@ -376,6 +389,77 @@ ul > a > img {
   list-style-position: inside;
   margin-left: 6px;
   list-style-image: url(../img/Dot.svg);
+}
+
+main {
+  width: 100%;
+  background: var(--gradient-supersoft, linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%));
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 600px;
+  max-height: 600px;
+  padding: 521px 0 60px 0;
+  background: url(../img/Symbol.svg) center no-repeat;
+  background-position: top;
+  background-size: 1000px;
+}
+
+.experience {
+  color: white;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.experience_text {
+  max-width: 861px;
+  padding: 0 0 0 60px;
+}
+.experience_text > h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.experience_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 60px 0 0;
+  border-right: #b3b3ba 2px solid;
+}
+.experience_inputs > label > h2 {
+  font-size: 38px;
+}
+
+.experience input {
+  display: none; /* Hide the native radio input */
+}
+
+.experience label {
+  color: #b3b3ba;
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  transition: 1s linear;
+}
+
+.experience input:checked + label {
+  color: transparent; /* Делаем текст невидимым */
+  background: linear-gradient(90deg, #ef8080 0.84%, #f0145a 99.96%);
+  -webkit-background-clip: text; /* Свойство для поддержки веб-кит браузерами */
+  background-clip: text;
+}
+
+.experience label:hover {
+  color: #f0145a;
 }
 
 /*# sourceMappingURL=style.css.map */
