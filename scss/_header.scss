@@ -1,0 +1,32 @@
+.header {
+  padding-top: 50px;
+  width: 100%;
+  background-color: gray;
+  max-height: 116px;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  color: white;
+  &_about_list,
+  &_contacts_list {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    & > li {
+      padding-left: 15px;
+    }
+  }
+}
+.change_language {
+  display: flex;
+}
+ul > p,
+ul > a > img {
+  padding: 6px;
+}
+.point {
+  //list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 6px;
+  list-style-image: url(../img/Dot.svg);
+}
