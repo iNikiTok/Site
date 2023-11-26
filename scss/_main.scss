@@ -4,6 +4,21 @@ main {
     --gradient-supersoft,
     linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%)
   );
+  border-radius: 0px 0px 12px 12px;
+}
+.bgF {
+  width: 98%;
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+  background: #cacadb;
+  margin: 0 auto;
+}
+.bgS {
+  width: 96%;
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+  background: #e7e7f2;
+  margin: 0 auto;
 }
 .title {
   display: flex;
@@ -18,6 +33,8 @@ main {
   background-position: top;
   background-size: 1000px;
 }
+
+//experience
 .experience {
   color: white;
   padding: 60px 0;
@@ -57,6 +74,7 @@ main {
   appearance: none;
   margin: 0;
   transition: 1s linear;
+  cursor: pointer;
 }
 .experience input:checked + label {
   color: transparent; /* Делаем текст невидимым */
@@ -68,3 +86,51 @@ main {
   color: $checked-color;
 }
 //end
+
+//grid
+.grid {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0 60px 0;
+  &_titel {
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $checked-color;
+    & > h2 {
+      font-size: 38px;
+    }
+    & > a {
+      color: $checked-color;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+  &_block {
+    max-width: 493px;
+    &_icon {
+      background-color: white;
+      padding: 14px;
+      border-radius: 24px;
+    }
+    &_titel {
+      color: $blue-color;
+      font-size: 22px;
+    }
+    &_text {
+      font-size: 16px;
+      color: white;
+      font-weight: 300;
+    }
+  }
+  &_blocks {
+    max-width: 1600px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 463px 463px 463px;
+    gap: 60px;
+  }
+}

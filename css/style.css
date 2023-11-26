@@ -394,6 +394,23 @@ ul > a > img {
 main {
   width: 100%;
   background: var(--gradient-supersoft, linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%));
+  border-radius: 0px 0px 12px 12px;
+}
+
+.bgF {
+  width: 98%;
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+  background: #cacadb;
+  margin: 0 auto;
+}
+
+.bgS {
+  width: 96%;
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+  background: #e7e7f2;
+  margin: 0 auto;
 }
 
 .title {
@@ -449,6 +466,7 @@ main {
   appearance: none;
   margin: 0;
   transition: 1s linear;
+  cursor: pointer;
 }
 
 .experience input:checked + label {
@@ -460,6 +478,53 @@ main {
 
 .experience label:hover {
   color: #f0145a;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0 60px 0;
+}
+.grid_titel {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #f0145a;
+}
+.grid_titel > h2 {
+  font-size: 38px;
+}
+.grid_titel > a {
+  color: #f0145a;
+  font-size: 14px;
+  font-weight: 700;
+}
+.grid_block {
+  max-width: 493px;
+}
+.grid_block_icon {
+  background-color: white;
+  padding: 14px;
+  border-radius: 24px;
+}
+.grid_block_titel {
+  color: #24a3ff;
+  font-size: 22px;
+}
+.grid_block_text {
+  font-size: 16px;
+  color: white;
+  font-weight: 300;
+}
+.grid_blocks {
+  max-width: 1600px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 463px 463px 463px;
+  gap: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
