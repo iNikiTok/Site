@@ -1,0 +1,66 @@
+.second_main {
+  width: 100%;
+}
+.team {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &_buttons {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 8px solid #24a4ff67;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+    top: 4px;
+    &:checked {
+      border: 8px solid $blue-color;
+    }
+  }
+  &_slider {
+    margin: 10px 0;
+    max-width: 1600px;
+    width: 100%;
+    max-height: 298px;
+    height: 100%;
+    background-color: $grey-bg;
+    background-image: url(../img/Team-1.svg);
+    background-size: 400px 500px;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    &_text {
+      max-width: 1200px;
+      margin-left: 400px;
+      padding: 30px;
+      color: $grey-color;
+      & > a {
+        color: $blue-color;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      & > h2 {
+        font-size: 38px;
+        background: var(
+          --gradient-red-text,
+          linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 24px;
+      }
+      & > span {
+        font-size: 16px;
+        padding: 6px 0;
+        font-weight: 700;
+      }
+      & > p {
+        font-size: 14px;
+      }
+    }
+  }
+}
