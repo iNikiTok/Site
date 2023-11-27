@@ -111,6 +111,7 @@ main {
   }
   &_block {
     max-width: 493px;
+    width: 100%;
     &_icon {
       background-color: white;
       padding: 14px;
@@ -130,7 +131,10 @@ main {
     max-width: 1600px;
     width: 100%;
     display: grid;
-    grid-template-columns: 463px 463px 463px;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
+    @media screen and (max-width: 1700px) {
+      max-width: 100%;
+    }
   }
 }
