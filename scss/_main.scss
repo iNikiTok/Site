@@ -53,6 +53,7 @@ main {
   &_inputs {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 30px;
     padding: 0 60px 0 0;
     border-right: $grey-color 2px solid;
@@ -95,7 +96,7 @@ main {
   padding: 60px 0 60px 0;
   &_titel {
     max-width: 1600px;
-    width: 100%;
+    width: 89%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -134,7 +135,46 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
     @media screen and (max-width: 1700px) {
+      max-width: 89%;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .experience_text {
+    max-width: 405px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .experience {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    &_text {
+      max-width: 861px;
+      padding: 60px 0 0 0;
+      border-top: 4px $grey-color solid;
+      & > h3 {
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+    &_inputs {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
       max-width: 100%;
+      white-space: nowrap;
+      padding: 0 0 60px 0;
+      overflow-x: auto;
+      border-right: none;
+      & > label > h2 {
+        font-size: 38px;
+      }
     }
   }
 }

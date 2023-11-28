@@ -16,17 +16,37 @@
       padding-left: 15px;
     }
   }
+  &_logo {
+    padding: 0 15px;
+  }
 }
-.change_language {
-  display: flex;
+.dot {
+  padding: 0 6px;
+}
+.header_contacts_invisibel {
+  visibility: hidden;
+  display: none;
 }
 ul > p,
 ul > a > img {
-  padding: 6px;
+  padding: 0 6px;
 }
-.point {
-  //list-style-type: disc;
-  list-style-position: inside;
-  margin-left: 6px;
-  list-style-image: url(../img/Dot.svg);
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 70%;
+    padding: 50px 0 0 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .header_contacts_invisibel {
+    visibility: visible;
+    display: block;
+  }
+  .header_contacts_visibel {
+    visibility: hidden;
+    display: none;
+  }
 }

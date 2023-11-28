@@ -23,9 +23,7 @@
   &_slider {
     margin: 10px 0;
     max-width: 1600px;
-    width: 100%;
-    max-height: 298px;
-    height: 100%;
+    width: 89%;
     background-color: $grey-bg;
     background-image: url(../img/Team-1.svg);
     background-size: 400px 500px;
@@ -33,9 +31,7 @@
     background-repeat: no-repeat;
     border-radius: 12px;
     &_text {
-      max-width: 1200px;
-      margin-left: 400px;
-      padding: 30px;
+      padding: 30px 30px 30px 430px;
       color: $grey-color;
       & > a {
         color: $blue-color;
@@ -131,7 +127,10 @@ footer {
 .footer {
   width: 100%;
   background-color: $grey-bg;
+
   &_container {
+    padding: 30px 0;
+    border-top: $grey-color 2px solid;
     max-width: 1600px;
     width: 100%;
     display: flex;
@@ -152,13 +151,15 @@ footer {
 }
 .more {
   margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &_titel {
     &_container {
-      margin: 0 160px;
       max-width: 1600px;
-      width: 100%;
+      width: 89%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
     }
     & > p {
       padding: 10px 0;
@@ -176,28 +177,35 @@ footer {
     }
   }
   &_blocks {
+    max-width: 1600px;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 30px;
   }
   &_block {
     max-width: 483px;
     width: 100%;
-    max-height: 370px;
-    height: 370px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-end;
-    padding: 30px;
+    justify-content: flex-start;
+    padding: 15px;
     border-radius: 8px;
     background-image: url(../img/Publication-1.svg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: 630px 330px;
     background-position-y: -100px;
+    &_second {
+      background-image: url(../img/Publication-2.svg);
+    }
+    &_full {
+      background-image: url(../img/Publication-3.svg);
+    }
     &_text {
+      padding-top: 210px;
       & > span,
       div,
       p {
@@ -214,6 +222,62 @@ footer {
       & > div {
         color: $blue-color;
         font-weight: 700;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .team {
+    &_slider {
+      background-size: 520px 550px;
+      background-position-x: -100px;
+    }
+  }
+  .clients {
+    padding: 0 0;
+    &_containers {
+      overflow: unset;
+      border-radius: 0;
+    }
+    &_container {
+      max-width: 256px;
+    }
+  }
+  .more {
+    &_block {
+      max-width: 251px;
+    }
+    &_blocks {
+      width: 89%;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .team {
+    &_slider {
+      background-size: 680px 680px;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-position-y: -265px;
+      border-radius: 12px;
+      background-position-x: 0px;
+      &_text {
+        padding: 430px 30px 30px 30px;
+        color: $grey-color;
+      }
+    }
+  }
+  .more {
+    &_blocks {
+      flex-wrap: wrap;
+    }
+    &_block {
+      background-size: 370px 225px;
+      background-position-y: 0;
+      &_full {
+        max-width: 100%;
+        background-size: 685px 415px;
+        background-position-y: -189px;
       }
     }
   }
