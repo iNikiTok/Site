@@ -357,8 +357,31 @@ a {
   font-weight: 700;
   transition: 100ms linear;
 }
+.about_links_selected {
+  color: #f0145a;
+  border-bottom: 2px solid #f0145a;
+  padding-bottom: 2px;
+}
 .about_links:hover {
   color: #f0145a;
+}
+
+.btn {
+  color: white;
+  padding: 14px 26px;
+  background-color: #24a3ff;
+  border-radius: 12px;
+  box-shadow: #24a3ff 0 0 20px;
+  transition: 0.3s linear;
+  border: #24a3ff 4px solid;
+}
+.btn:hover {
+  box-shadow: #24a3ff 0 0 40px;
+}
+.btn:active {
+  transition: 20s linear;
+  box-shadow: #24a3ff 0 0 180px;
+  background-color: #0e334e;
 }
 
 @media screen and (max-width: 375px) {
@@ -761,6 +784,12 @@ main {
   .experience_inputs {
     padding: 0 0 30px 0;
   }
+  .bgF {
+    width: 90%;
+  }
+  .bgS {
+    width: 87%;
+  }
 }
 .second_main {
   width: 100%;
@@ -955,6 +984,7 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  padding: 30px 0 0 0;
 }
 .more_block {
   max-width: 483px;
@@ -1139,6 +1169,90 @@ footer {
   .more_block_text > div {
     color: #24a3ff;
     font-weight: 700;
+  }
+}
+.splash {
+  display: flex;
+  padding: 176px 60px 60px;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 28px;
+}
+.splash_titel {
+  background: linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.splash_text {
+  max-width: 1360px;
+  font-size: 19px;
+}
+
+.offer {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-bottom: 60px;
+}
+.offer_titel {
+  padding: 30px 0 15px;
+}
+.offer_container {
+  max-width: 1360px;
+  width: 89%;
+  border-top: 4px #b3b3ba solid;
+}
+.offer_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.offer_list_elements {
+  max-width: 636px;
+  padding: 15px 0;
+}
+.offer_list_elements::before {
+  content: url(../img/dot-red.svg);
+  display: block;
+  translate: -8px 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .splash {
+    padding: 280px 60px 60px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .splash {
+    padding: 132px 60px 60px;
+  }
+  .offer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-bottom: 60px;
+  }
+  .offer_titel {
+    padding: 30px 0 15px;
+  }
+  .offer_container {
+    max-width: 1360px;
+    width: 89%;
+    border-top: 4px #b3b3ba solid;
+  }
+  .offer_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .offer_list_elements {
+    padding: 0;
   }
 }
 

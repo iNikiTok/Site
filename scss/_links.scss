@@ -17,9 +17,30 @@ a {
   color: white;
   font-weight: 700;
   transition: 100ms linear;
-
+  &_selected {
+    color: $checked-color;
+    border-bottom: 2px solid $checked-color;
+    padding-bottom: 2px;
+  }
   &:hover {
     color: $checked-color;
+  }
+}
+.btn {
+  color: white;
+  padding: 14px 26px;
+  background-color: $blue-color;
+  border-radius: 12px;
+  box-shadow: $blue-color 0 0 20px;
+  transition: 0.3s linear;
+  border: $blue-color 4px solid;
+  &:hover {
+    box-shadow: $blue-color 0 0 40px;
+  }
+  &:active {
+    transition: 20s linear;
+    box-shadow: $blue-color 0 0 180px;
+    background-color: #0e334e;
   }
 }
 @media screen and (max-width: 375px) {
