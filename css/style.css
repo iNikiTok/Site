@@ -557,6 +557,9 @@ ul > a > img {
     display: none;
     visibility: hidden;
   }
+  .dot {
+    display: none;
+  }
 }
 main {
   width: 100%;
