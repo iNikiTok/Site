@@ -32,8 +32,20 @@ main {
   background: url(../img/Symbol.svg) center no-repeat;
   background-position: top;
   background-size: 1000px;
+  &_text {
+    font-size: 38px;
+  }
+}
+.title_scroll svg {
+  width: 42px;
+  height: 42px;
+  fill: none;
+  transition: stroke 0.3s ease; /* Анимация при изменении цвета stroke */
 }
 
+.title_scroll:hover svg {
+  stroke: red; /* Замените на цвет, который вы хотите использовать при наведении */
+}
 //experience
 .experience {
   color: white;
@@ -175,6 +187,37 @@ main {
       & > label > h2 {
         font-size: 38px;
       }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .title {
+    max-height: 365px;
+    background-size: 600px;
+    padding: 277px 0 60px;
+    &_text {
+      max-width: 315px;
+      text-align: center;
+    }
+  }
+  .grid {
+    &_blocks {
+      grid-template-columns: 1fr;
+    }
+  }
+  .experience {
+    padding: 30px;
+    &_text {
+      padding: 30px 0 0 0;
+      & > h3 {
+        font-size: 20px;
+      }
+      & > p {
+        font-style: 19px;
+      }
+    }
+    &_inputs {
+      padding: 0 0 30px 0;
     }
   }
 }

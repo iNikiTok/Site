@@ -1,12 +1,23 @@
 .header {
-  padding-top: 50px;
-  width: 100%;
-  position: absolute;
-  max-height: 160px;
-  display: flex;
-  justify-content: space-around;
-  align-items: end;
-  color: white;
+  // padding-top: 50px;
+  // width: 100%;
+  // position: absolute;
+  // max-height: 160px;
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: end;
+  // color: white;
+  &_pc,
+  &_mobile {
+    padding-top: 50px;
+    width: 100%;
+    position: absolute;
+    max-height: 160px;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    color: white;
+  }
   &_about_list,
   &_contacts_list {
     display: flex;
@@ -18,6 +29,10 @@
   }
   &_logo {
     padding: 0 15px;
+  }
+  &_mobile {
+    display: none;
+    visibility: hidden;
   }
 }
 .dot {
@@ -33,7 +48,8 @@ ul > a > img {
 }
 
 @media screen and (max-width: 768px) {
-  .header {
+  .header_pc,
+  .header_mobile {
     width: 70%;
     padding: 50px 0 0 60px;
     flex-direction: column;
@@ -48,5 +64,128 @@ ul > a > img {
   .header_contacts_visibel {
     visibility: hidden;
     display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    &_burger {
+      &_menu {
+        display: none;
+        &_visibile {
+          display: flex;
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 0 0 10px 10px;
+          padding: 91px 0 0 0;
+          margin-top: 48.39px;
+          top: 0;
+          left: 0;
+          & > ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            padding: 0 0 10px 0;
+          }
+        }
+      }
+      &_button {
+        cursor: pointer;
+        height: 27px;
+        width: 27px;
+        overflow: visible;
+        position: relative;
+        z-index: 2;
+        &_close {
+          // TOP
+          span:before {
+            top: 0px;
+            transform: rotate(90deg);
+            width: 27px;
+          }
+
+          // MIDDLE
+          span {
+            transform: rotate(-45deg);
+            top: 13px;
+            width: 27px;
+          }
+
+          // BOTTOM
+          span:after {
+            top: 0px;
+            left: 0;
+            transform: rotate(90deg);
+            opacity: 0;
+            width: 0;
+          }
+        }
+        &_style,
+        &_style:before,
+        &_style:after {
+          background: #fff;
+          display: block;
+          height: 2px;
+          opacity: 1;
+          position: absolute;
+          transition: 0.3s ease-in-out;
+        }
+        &_style:before,
+        &_style:after {
+          content: "";
+        }
+        &_style:before {
+          left: 0px;
+          top: -10px;
+          width: 27px;
+        }
+        // MIDDLE
+        &_style {
+          right: 0px;
+          top: 13px;
+          width: 27px;
+        }
+        // BOTTOM
+        &_style:after {
+          left: 0px;
+          top: 10px;
+          width: 27px;
+        }
+      }
+    }
+    &_mobile {
+      padding: 0;
+      width: 100%;
+      display: block;
+      visibility: visible;
+      width: 100%;
+      &_logo {
+        z-index: 2;
+      }
+      &_contacts {
+        background-color: rgba(255, 255, 255, 0.19);
+        width: 100%;
+        display: flex;
+        padding: 15px;
+        max-width: 345px;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &_flex {
+        display: flex;
+        padding: 15px;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &_pc {
+      display: none;
+      visibility: hidden;
+    }
   }
 }

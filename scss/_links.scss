@@ -22,3 +22,12 @@ a {
     color: $checked-color;
   }
 }
+@media screen and (max-width: 375px) {
+  .about_links {
+    display: block;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 30px 0;
+    font-size: 30px;
+  }
+}

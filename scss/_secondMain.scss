@@ -120,16 +120,33 @@
     }
   }
 }
+//footer
 footer {
-  display: flex;
-  justify-content: center;
-}
-.footer {
   width: 100%;
   background-color: $grey-bg;
-
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  &_text {
+    color: $grey-color;
+    font-weight: 400;
+  }
+  &_number {
+    font-weight: 700;
+    color: #46466e;
+  }
+  &_mail {
+    color: $blue-color;
+    font-weight: 700;
+    transition: 100ms linear;
+    &:hover {
+      color: #46466e;
+    }
+  }
   &_container {
     padding: 30px 0;
+    gap: 10px;
     border-top: $grey-color 2px solid;
     max-width: 1600px;
     width: 100%;
@@ -137,13 +154,12 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     & > div {
-      display: flex;
-      flex-direction: column;
       & > ol {
         display: flex;
         align-items: center;
+        padding: 5px;
         & > li {
-          padding: 0 10px 0 0;
+          padding: 2px 10px;
         }
       }
     }
@@ -166,6 +182,7 @@ footer {
       font-size: 14px;
       color: $blue-color;
       font-weight: 700;
+      text-transform: uppercase;
     }
     & > span {
       font-size: 38px;
@@ -278,6 +295,115 @@ footer {
         max-width: 100%;
         background-size: 685px 415px;
         background-position-y: -189px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .team {
+    &_slider {
+      background-size: 415px 415px;
+      background-position-y: 0px;
+      &_text {
+        & > h2 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .clients {
+    &_container {
+      max-width: 100%;
+      &_clickky,
+      &_eco,
+      &_infatek,
+      &_citypark,
+      &_artprint,
+      &_ultimate {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    &_container {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        & > ol {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .more {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_titel {
+      &_container {
+        max-width: 1600px;
+        width: 89%;
+        display: flex;
+        justify-content: flex-start;
+      }
+      & > p {
+        padding: 10px 0;
+        font-size: 14px;
+        color: $blue-color;
+        font-weight: 700;
+      }
+      & > span {
+        font-size: 30px;
+        font-weight: 700;
+        background: linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &_blocks {
+      max-width: 1600px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      gap: 30px;
+    }
+    &_block {
+      max-width: 315px;
+      width: 100%;
+
+      &_full {
+        max-width: 315px;
+      }
+      &_text {
+        padding-top: 210px;
+        & > span,
+        div,
+        p {
+          padding: 15px 0;
+        }
+        & > span {
+          color: $grey-color;
+          font-size: 12px;
+          font-weight: 700;
+        }
+        & > p {
+          border-top: $grey-bg solid 4px;
+        }
+        & > div {
+          color: $blue-color;
+          font-weight: 700;
+        }
       }
     }
   }
